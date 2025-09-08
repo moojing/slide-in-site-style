@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Holiday Friend Custom Colors
+        'holiday-red': "hsl(var(--holiday-red))",
+        'holiday-red-hover': "hsl(var(--holiday-red-hover))",
+        'holiday-dark': "hsl(var(--holiday-dark))",
+        'holiday-card': "hsl(var(--holiday-card))",
+        'holiday-text': "hsl(var(--holiday-text))",
+        'holiday-text-muted': "hsl(var(--holiday-text-muted))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
