@@ -131,5 +131,265 @@ export const PROFILES: Profile[] = [
       phone: '+66 81 567 8901',
       line: 'maya_huahin'
     }
+  },
+  {
+    id: '6',
+    name: 'Kiki',
+    age: 20,
+    city: 'Bangkok',
+    region: 'Bangkok',
+    gender: 'Female',
+    agency: 'Bangkok Luxury',
+    height: '168 cm',
+    bodyType: 'Tall',
+    measurements: '87 D-59-88',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'Chinese (Basic)'],
+    likes: ['PSE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK', 'DT'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 89 678 9012',
+      line: 'kiki_bkk'
+    }
+  },
+  {
+    id: '7',
+    name: 'Mimi',
+    age: 26,
+    city: 'Phuket',
+    region: 'Phuket',
+    gender: 'Female',
+    agency: 'Island Dreams',
+    height: '161 cm',
+    bodyType: 'Curvy',
+    measurements: '90 DD-60-89',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'Russian (Basic)'],
+    likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 87 789 0123',
+      line: 'mimi_phuket'
+    }
+  },
+  {
+    id: '8',
+    name: 'Amy',
+    age: 23,
+    city: 'Pattaya',
+    region: 'Pattaya',
+    gender: 'Female',
+    agency: 'Sunset Escorts',
+    height: '157 cm',
+    bodyType: 'Petite',
+    measurements: '83 B-55-83',
+    languages: ['English (Basic)', 'Thai (Fluent)', 'Korean (Basic)'],
+    likes: ['GFE', 'BBBJ', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: false,
+    contactInfo: {
+      phone: '+66 83 890 1234',
+      line: 'amy_pattaya'
+    }
+  },
+  {
+    id: '9',
+    name: 'Ploy',
+    age: 22,
+    city: 'Koh Samui',
+    region: 'Koh Samui',
+    gender: 'Female',
+    agency: 'Samui Angels',
+    height: '163 cm',
+    bodyType: 'Athletic',
+    measurements: '85 C-57-85',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'French (Basic)'],
+    likes: ['GFE', 'BBBJ', 'CIM', 'DATY', 'DFK', 'COB'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 81 901 2345',
+      line: 'ploy_samui'
+    }
+  },
+  {
+    id: '10',
+    name: 'Tina',
+    age: 27,
+    city: 'Chiang Mai',
+    region: 'Chiang Mai',
+    gender: 'Female',
+    agency: 'Mountain Rose',
+    height: '159 cm',
+    bodyType: 'Slim',
+    measurements: '84 C-56-84',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'Japanese (Fluent)'],
+    likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 85 012 3456',
+      line: 'tina_cm'
+    }
+  },
+  {
+    id: '11',
+    name: 'Fern',
+    age: 21,
+    city: 'Krabi',
+    region: 'Krabi',
+    gender: 'Female',
+    agency: 'Emerald Coast',
+    height: '162 cm',
+    bodyType: 'Curvy',
+    measurements: '88 D-58-87',
+    languages: ['English (Basic)', 'Thai (Fluent)'],
+    likes: ['GFE', 'BBBJ', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: false,
+    contactInfo: {
+      phone: '+66 87 123 4567',
+      line: 'fern_krabi'
+    }
+  },
+  {
+    id: '12',
+    name: 'Nina',
+    age: 25,
+    city: 'Rayong',
+    region: 'Rayong',
+    gender: 'Female',
+    agency: 'Coastal Beauty',
+    height: '166 cm',
+    bodyType: 'Tall',
+    measurements: '86 C-58-86',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'Swedish (Basic)'],
+    likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 81 234 5678',
+      line: 'nina_rayong'
+    }
+  },
+  {
+    id: '13',
+    name: 'Joy',
+    age: 24,
+    city: 'Bangkok',
+    region: 'Bangkok',
+    gender: 'Female',
+    agency: 'Elite Bangkok',
+    height: '160 cm',
+    bodyType: 'Petite',
+    measurements: '82 B-55-82',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'German (Fluent)'],
+    likes: ['GFE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 89 345 6789',
+      line: 'joy_bangkok'
+    }
+  },
+  {
+    id: '14',
+    name: 'Bee',
+    age: 23,
+    city: 'Hua Hin',
+    region: 'Hua Hin',
+    gender: 'Female',
+    agency: 'Seaside Companions',
+    height: '164 cm',
+    bodyType: 'Athletic',
+    measurements: '85 C-57-85',
+    languages: ['English (Basic)', 'Thai (Fluent)', 'Danish (Basic)'],
+    likes: ['GFE', 'BBBJ', 'DATY', 'DFK', 'COB'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 81 456 7890',
+      line: 'bee_huahin'
+    }
+  },
+  {
+    id: '15',
+    name: 'Lily',
+    age: 26,
+    city: 'Phuket',
+    region: 'Phuket',
+    gender: 'Female',
+    agency: 'Tropical Paradise',
+    height: '167 cm',
+    bodyType: 'Tall',
+    measurements: '89 D-59-88',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'Italian (Basic)'],
+    likes: ['PSE', 'GFE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK', 'DT'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 87 567 8901',
+      line: 'lily_phuket'
+    }
+  },
+  {
+    id: '16',
+    name: 'Rose',
+    age: 22,
+    city: 'Pattaya',
+    region: 'Pattaya',
+    gender: 'Female',
+    agency: 'Night Flowers',
+    height: '158 cm',
+    bodyType: 'Curvy',
+    measurements: '87 D-57-86',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'Dutch (Basic)'],
+    likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: false,
+    contactInfo: {
+      phone: '+66 83 678 9012',
+      line: 'rose_pattaya'
+    }
+  },
+  {
+    id: '17',
+    name: 'Candy',
+    age: 21,
+    city: 'Koh Samui',
+    region: 'Koh Samui',
+    gender: 'Female',
+    agency: 'Island Beauties',
+    height: '161 cm',
+    bodyType: 'Slim',
+    measurements: '84 C-56-84',
+    languages: ['English (Basic)', 'Thai (Fluent)', 'Norwegian (Basic)'],
+    likes: ['GFE', 'BBBJ', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 81 789 0123',
+      line: 'candy_samui'
+    }
+  },
+  {
+    id: '18',
+    name: 'Ice',
+    age: 25,
+    city: 'Bangkok',
+    region: 'Bangkok',
+    gender: 'Female',
+    agency: 'Premium Bangkok',
+    height: '165 cm',
+    bodyType: 'Athletic',
+    measurements: '86 C-58-86',
+    languages: ['English (Fluent)', 'Thai (Fluent)', 'Mandarin (Fluent)'],
+    likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK'],
+    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    isVerified: true,
+    contactInfo: {
+      phone: '+66 89 890 1234',
+      line: 'ice_bangkok'
+    }
   }
 ];
