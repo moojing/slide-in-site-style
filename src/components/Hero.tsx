@@ -16,11 +16,11 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Make a friend that makes your day
+          Premium Dating Experience
         </h1>
         
         <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Match, Meet, Make Your Day Unforgettable.
+          Connect with verified companions across Thailand
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -28,14 +28,15 @@ const Hero = () => {
             variant="outline" 
             size="lg"
             className="border-white text-white hover:bg-white hover:text-background min-w-40"
+            onClick={() => document.querySelector('#profiles')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Contact Us
+            Browse Profiles
           </Button>
           <Button 
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-40"
           >
-            Make a Friend
+            Get Started
           </Button>
         </div>
       </div>
