@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import heroBackground from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -28,13 +31,14 @@ const Hero = () => {
             variant="outline" 
             size="lg"
             className="border-white text-white hover:bg-white hover:text-background min-w-40"
-            onClick={() => document.querySelector('#profiles')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => navigate('/regions')}
           >
             Browse Profiles
           </Button>
           <Button 
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-40"
+            onClick={() => navigate('/regions')}
           >
             Get Started
           </Button>
