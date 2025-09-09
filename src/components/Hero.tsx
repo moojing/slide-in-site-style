@@ -20,14 +20,16 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Grid Background */}
-      <div className="absolute inset-0 grid grid-cols-3 grid-rows-3">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className="w-full h-full bg-cover bg-center opacity-30 blur-sm"
-            style={{ backgroundImage: `url(${image})` }}
-          />
-        ))}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="grid grid-cols-3 grid-rows-3 gap-2 w-3/4 h-3/4 opacity-30">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="w-full h-full bg-cover bg-center blur-sm rounded-lg"
+              style={{ backgroundImage: `url(${image})` }}
+            />
+          ))}
+        </div>
       </div>
       
       {/* Overlay */}
