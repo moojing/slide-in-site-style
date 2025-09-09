@@ -49,7 +49,12 @@ const Hero = () => {
           <Button 
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-40"
-            onClick={() => navigate('/regions')}
+            onClick={() => {
+              const regionSection = document.querySelector('#region-selection');
+              if (regionSection) {
+                regionSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             Get Started
           </Button>
