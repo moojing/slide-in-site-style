@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -49,12 +50,7 @@ const Hero = () => {
           <Button 
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-40"
-            onClick={() => {
-              const regionSection = document.querySelector('#region-selection');
-              if (regionSection) {
-                regionSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={() => smoothScrollTo('#region-selection', 1200)}
           >
             Get Started
           </Button>

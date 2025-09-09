@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +16,8 @@ const Navigation = () => {
 
   const handleMenuClick = (href: string) => {
     setIsOpen(false);
-    // Smooth scroll to section
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    // Smooth scroll to section with custom animation
+    smoothScrollTo(href, 1200);
   };
 
   return (
