@@ -4,24 +4,24 @@ import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const navigate = useNavigate();
 
-  // Create grid of images for background
+  // Create interspersed grid of images for background
   const images = [
     "/lovable-uploads/026a2032-4f2f-453d-9d4e-da108e10d1f6.png",
     "/lovable-uploads/ae3f5fcd-f6e8-40a2-9903-224517228703.png", 
     "/lovable-uploads/2e61fad2-de0e-4225-a7d4-ddb66aba82b7.png",
-    "/lovable-uploads/026a2032-4f2f-453d-9d4e-da108e10d1f6.png",
-    "/lovable-uploads/ae3f5fcd-f6e8-40a2-9903-224517228703.png",
     "/lovable-uploads/2e61fad2-de0e-4225-a7d4-ddb66aba82b7.png",
     "/lovable-uploads/026a2032-4f2f-453d-9d4e-da108e10d1f6.png",
     "/lovable-uploads/ae3f5fcd-f6e8-40a2-9903-224517228703.png",
-    "/lovable-uploads/2e61fad2-de0e-4225-a7d4-ddb66aba82b7.png"
+    "/lovable-uploads/ae3f5fcd-f6e8-40a2-9903-224517228703.png",
+    "/lovable-uploads/2e61fad2-de0e-4225-a7d4-ddb66aba82b7.png",
+    "/lovable-uploads/026a2032-4f2f-453d-9d4e-da108e10d1f6.png"
   ];
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="grid grid-cols-3 grid-rows-3 gap-2 w-3/4 h-3/4 opacity-30">
+        <div className="grid grid-cols-3 grid-rows-3 gap-2 w-1/2 h-1/2 opacity-30">
           {images.map((image, index) => (
             <div
               key={index}
