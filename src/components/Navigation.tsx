@@ -3,9 +3,11 @@ import { Menu, X, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { smoothScrollTo } from "@/lib/smoothScroll";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const menuItems = [
     { label: "Home", href: "#home" },
@@ -16,20 +18,30 @@ const Navigation = () => {
 
   const handleMenuClick = (href: string) => {
     setIsOpen(false);
-    // Smooth scroll to section with custom animation
-    smoothScrollTo(href, 1200);
+    
+    if (href === "#home") {
+      // Navigate to home page
+      navigate("/");
+    } else {
+      // Smooth scroll to section with custom animation
+      smoothScrollTo(href, 1200);
+    }
+  };
+
+  const handleLogoClick = () => {
+    navigate("/");
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <button onClick={handleLogoClick} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
             <Heart className="w-5 h-5 text-primary-foreground" />
           </div>
           <span className="text-xl font-bold text-primary">Holiday Friend</span>
-        </div>
+        </button>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
@@ -53,12 +65,12 @@ const Navigation = () => {
           </SheetTrigger>
           <SheetContent side="right" className="w-80 bg-card border-border">
             <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center space-x-2">
+              <button onClick={handleLogoClick} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <Heart className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <span className="text-xl font-bold text-primary">Holiday Friend</span>
-              </div>
+              </button>
             </div>
             
             <div className="flex flex-col space-y-6">
