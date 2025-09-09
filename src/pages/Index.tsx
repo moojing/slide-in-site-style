@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import RegionSelection from "@/components/RegionSelection";
+import HowItWorks from "@/components/HowItWorks";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -9,6 +10,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <RegionSelection />
+      <HowItWorks />
       <Footer />
     </div>
   );
