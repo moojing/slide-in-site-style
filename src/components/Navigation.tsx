@@ -8,8 +8,8 @@ const Navigation = () => {
 
   const menuItems = [
     { label: "Home", href: "#home" },
-    { label: "Find Girls", href: "#find-girls" },
-    { label: "Find Boys", href: "#find-boys" },
+    { label: "Find Girls", href: "#region-selection" },
+    { label: "Find Boys", href: "#region-selection" },
     { label: "Contact Us", href: "#contact" },
   ];
 

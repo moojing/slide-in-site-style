@@ -20,7 +20,7 @@ const RegionSelection = () => {
   };
 
   return (
-    <section className="py-20 bg-muted/50">
+    <section id="region-selection" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
