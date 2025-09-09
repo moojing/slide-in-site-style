@@ -11,8 +11,7 @@ const Navigation = () => {
 
   const menuItems = [
     { label: "Home", href: "#home" },
-    { label: "Find Girls", href: "#region-selection" },
-    { label: "Find Boys", href: "#region-selection" },
+    { label: "Search", href: "/regions" },
     { label: "Contact Us", href: "#contact" },
   ];
 
@@ -22,6 +21,9 @@ const Navigation = () => {
     if (href === "#home") {
       // Navigate to home page
       navigate("/");
+    } else if (href.startsWith("/")) {
+      // Navigate to different page
+      navigate(href);
     } else {
       // Smooth scroll to section with custom animation
       smoothScrollTo(href, 1200);
