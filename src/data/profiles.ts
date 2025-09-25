@@ -22,7 +22,7 @@ export interface Profile {
 
 export const REGIONS = [
   'Bangkok',
-  'Chiang Mai', 
+  'Chiang Mai',
   'Phuket',
   'Pattaya',
   'Hua Hin',
@@ -45,7 +45,7 @@ export const PROFILES: Profile[] = [
     measurements: '84 C-57-85',
     languages: ['English (Basic)', 'Thai (Fluent)'],
     likes: ['BBBJ', 'CIM', 'COB', 'DATY', 'DFK', 'DT'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-01.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 89 123 4567',
@@ -65,7 +65,7 @@ export const PROFILES: Profile[] = [
     measurements: '82 B-56-84',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'Japanese (Basic)'],
     likes: ['GFE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-02.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 87 234 5678',
@@ -85,7 +85,7 @@ export const PROFILES: Profile[] = [
     measurements: '88 D-58-87',
     languages: ['English (Fluent)', 'Thai (Fluent)'],
     likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-03.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 85 345 6789',
@@ -105,7 +105,7 @@ export const PROFILES: Profile[] = [
     measurements: '86 C-57-86',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'German (Basic)'],
     likes: ['GFE', 'BBBJ', 'CIM', 'DATY', 'DFK', 'COB'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-04.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 83 456 7890',
@@ -125,7 +125,7 @@ export const PROFILES: Profile[] = [
     measurements: '85 C-58-85',
     languages: ['English (Fluent)', 'Thai (Fluent)'],
     likes: ['GFE', 'BBBJ', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-05.jpg'],
     isVerified: false,
     contactInfo: {
       phone: '+66 81 567 8901',
@@ -145,7 +145,7 @@ export const PROFILES: Profile[] = [
     measurements: '87 D-59-88',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'Chinese (Basic)'],
     likes: ['PSE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK', 'DT'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-06.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 89 678 9012',
@@ -165,7 +165,7 @@ export const PROFILES: Profile[] = [
     measurements: '90 DD-60-89',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'Russian (Basic)'],
     likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-07.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 87 789 0123',
@@ -185,7 +185,7 @@ export const PROFILES: Profile[] = [
     measurements: '83 B-55-83',
     languages: ['English (Basic)', 'Thai (Fluent)', 'Korean (Basic)'],
     likes: ['GFE', 'BBBJ', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-08.jpg'],
     isVerified: false,
     contactInfo: {
       phone: '+66 83 890 1234',
@@ -205,7 +205,7 @@ export const PROFILES: Profile[] = [
     measurements: '85 C-57-85',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'French (Basic)'],
     likes: ['GFE', 'BBBJ', 'CIM', 'DATY', 'DFK', 'COB'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-09.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 81 901 2345',
@@ -225,7 +225,7 @@ export const PROFILES: Profile[] = [
     measurements: '84 C-56-84',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'Japanese (Fluent)'],
     likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-10.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 85 012 3456',
@@ -245,7 +245,7 @@ export const PROFILES: Profile[] = [
     measurements: '88 D-58-87',
     languages: ['English (Basic)', 'Thai (Fluent)'],
     likes: ['GFE', 'BBBJ', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-11.jpg'],
     isVerified: false,
     contactInfo: {
       phone: '+66 87 123 4567',
@@ -265,7 +265,7 @@ export const PROFILES: Profile[] = [
     measurements: '86 C-58-86',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'Swedish (Basic)'],
     likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-12.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 81 234 5678',
@@ -285,7 +285,7 @@ export const PROFILES: Profile[] = [
     measurements: '82 B-55-82',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'German (Fluent)'],
     likes: ['GFE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-13.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 89 345 6789',
@@ -305,7 +305,7 @@ export const PROFILES: Profile[] = [
     measurements: '85 C-57-85',
     languages: ['English (Basic)', 'Thai (Fluent)', 'Danish (Basic)'],
     likes: ['GFE', 'BBBJ', 'DATY', 'DFK', 'COB'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-14.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 81 456 7890',
@@ -325,7 +325,7 @@ export const PROFILES: Profile[] = [
     measurements: '89 D-59-88',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'Italian (Basic)'],
     likes: ['PSE', 'GFE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK', 'DT'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-15.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 87 567 8901',
@@ -345,7 +345,7 @@ export const PROFILES: Profile[] = [
     measurements: '87 D-57-86',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'Dutch (Basic)'],
     likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-16.jpg'],
     isVerified: false,
     contactInfo: {
       phone: '+66 83 678 9012',
@@ -365,7 +365,7 @@ export const PROFILES: Profile[] = [
     measurements: '84 C-56-84',
     languages: ['English (Basic)', 'Thai (Fluent)', 'Norwegian (Basic)'],
     likes: ['GFE', 'BBBJ', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-17.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 81 789 0123',
@@ -385,7 +385,7 @@ export const PROFILES: Profile[] = [
     measurements: '86 C-58-86',
     languages: ['English (Fluent)', 'Thai (Fluent)', 'Mandarin (Fluent)'],
     likes: ['GFE', 'PSE', 'BBBJ', 'CIM', 'COB', 'DATY', 'DFK'],
-    photos: ['/lovable-uploads/2b4dab6c-c3ed-49cb-b7a6-6ef56a8bfc15.png'],
+    photos: ['/lovable-uploads/profile-18.jpg'],
     isVerified: true,
     contactInfo: {
       phone: '+66 89 890 1234',
