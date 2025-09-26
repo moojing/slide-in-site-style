@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { PROFILES, REGIONS, Profile } from "@/data/profiles";
+import { ALL_PROFILES, getRegions, Profile } from "@/data/profiles";
 import ProfileCard from "./ProfileCard";
 import ProfileModal from "./ProfileModal";
 import {
@@ -19,9 +19,11 @@ const ProfilesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredProfiles = useMemo(() => {
-    return PROFILES.filter((profile) => {
-      const regionMatch = selectedRegion === "all" || profile.region === selectedRegion;
-      const genderMatch = selectedGender === "all" || profile.gender === selectedGender;
+    return ALL_PROFILES.filter((profile) => {
+      const regionMatch =
+        selectedRegion === "all" || profile.region === selectedRegion;
+      const genderMatch =
+        selectedGender === "all" || profile.gender === selectedGender;
       return regionMatch && genderMatch;
     });
   }, [selectedRegion, selectedGender]);
@@ -53,9 +55,11 @@ const ProfilesSection = () => {
         <div className="bg-card p-6 rounded-lg mb-8 shadow-sm">
           <div className="flex items-center gap-2 mb-4">
             <Filter className="w-5 h-5 text-muted-foreground" />
-            <h3 className="text-lg font-semibold text-card-foreground">Filters</h3>
+            <h3 className="text-lg font-semibold text-card-foreground">
+              Filters
+            </h3>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
             <div>
               <label className="text-sm font-medium text-card-foreground mb-2 block">
@@ -68,7 +72,7 @@ const ProfilesSection = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Regions</SelectItem>
-                  {REGIONS.map((region) => (
+                  {getRegions().map((region) => (
                     <SelectItem key={region} value={region}>
                       {region}
                     </SelectItem>
@@ -96,7 +100,8 @@ const ProfilesSection = () => {
 
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Badge variant="secondary">
-                {filteredProfiles.length} profile{filteredProfiles.length !== 1 ? 's' : ''} found
+                {filteredProfiles.length} profile
+                {filteredProfiles.length !== 1 ? "s" : ""} found
               </Badge>
             </div>
           </div>

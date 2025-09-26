@@ -20,6 +20,7 @@ export interface Profile {
   };
 }
 
+// Default regions used on first load. Can be overridden via localStorage.
 export const REGIONS = [
   'Bangkok',
   'Chiang Mai',
@@ -30,6 +31,33 @@ export const REGIONS = [
   'Krabi',
   'Rayong'
 ];
+
+export const REGIONS_STORAGE_KEY = 'app.regions';
+
+export function getRegions(): string[] {
+  try {
+    if (typeof window === 'undefined') return REGIONS;
+    const raw = window.localStorage.getItem(REGIONS_STORAGE_KEY);
+    if (!raw) return REGIONS;
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed) && parsed.every((r) => typeof r === 'string') && parsed.length > 0) {
+      return parsed as string[];
+    }
+    return REGIONS;
+  } catch {
+    return REGIONS;
+  }
+}
+
+export function setRegions(regions: string[]): void {
+  try {
+    if (typeof window === 'undefined') return;
+    const cleaned = Array.from(new Set(regions.map((r) => r.trim()).filter(Boolean)));
+    window.localStorage.setItem(REGIONS_STORAGE_KEY, JSON.stringify(cleaned));
+  } catch {
+    // no-op
+  }
+}
 
 export const PROFILES: Profile[] = [
   {
@@ -393,3 +421,39 @@ export const PROFILES: Profile[] = [
     }
   }
 ];
+// Ensure at least some male profiles for filtering
+export const MALE_PROFILES: Profile[] = [
+  {
+    id: 'm1',
+    name: 'Ken',
+    age: 28,
+    city: 'Bangkok',
+    region: 'Bangkok',
+    gender: 'Male',
+    agency: 'Bangkok Elite Escort',
+    height: '178 cm',
+    bodyType: 'Athletic',
+    languages: ['English (Fluent)', 'Thai (Fluent)'],
+    likes: ['GFE'],
+    photos: ['/lovable-uploads/profile-17.jpg'],
+    isVerified: true,
+    contactInfo: { phone: '+66 80 000 0001', line: 'ken_bkk' }
+  },
+  {
+    id: 'm2',
+    name: 'Jay',
+    age: 30,
+    city: 'Phuket',
+    region: 'Phuket',
+    gender: 'Male',
+    agency: 'Phuket Paradise',
+    height: '182 cm',
+    bodyType: 'Slim',
+    languages: ['English (Fluent)', 'Thai (Fluent)'],
+    likes: ['GFE'],
+    photos: ['/lovable-uploads/profile-18.jpg'],
+    isVerified: false,
+    contactInfo: { phone: '+66 80 000 0002', line: 'jay_phuket' }
+  }
+];
+export const ALL_PROFILES: Profile[] = [...PROFILES, ...MALE_PROFILES];

@@ -1,6 +1,12 @@
-import { REGIONS } from "@/data/profiles";
+import { getRegions } from "@/data/profiles";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -37,13 +43,13 @@ const RegionSelection = () => {
               <MapPin className="w-8 h-8 text-primary" />
             </div>
           </div>
-          
+
           <Select onValueChange={handleRegionSelect} value={selectedRegion}>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Select a region" />
             </SelectTrigger>
             <SelectContent>
-              {REGIONS.map((region) => (
+              {getRegions().map((region) => (
                 <SelectItem key={region} value={region}>
                   {region}
                 </SelectItem>
@@ -51,7 +57,7 @@ const RegionSelection = () => {
             </SelectContent>
           </Select>
 
-          <Button 
+          <Button
             onClick={handleContinue}
             disabled={!selectedRegion}
             className="w-full"
