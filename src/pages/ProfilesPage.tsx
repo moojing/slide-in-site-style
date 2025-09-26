@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { PROFILES, Profile } from "@/data/profiles";
+import { ALL_PROFILES, Profile } from "@/data/profiles";
 import ProfileCard from "@/components/ProfileCard";
 import ProfileModal from "@/components/ProfileModal";
 import { Button } from "@/components/ui/button";
@@ -16,11 +16,16 @@ const ProfilesPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredProfiles = useMemo(() => {
-    return PROFILES.filter((profile) => {
+    const matches = ALL_PROFILES.filter((profile) => {
       const regionMatch = profile.region === region;
       const genderMatch = profile.gender === gender;
       return regionMatch && genderMatch;
     });
+    if (matches.length > 0) return matches;
+    // Fallback: random subset by gender to guarantee results
+    const byGender = ALL_PROFILES.filter((p) => p.gender === gender);
+    const shuffled = [...byGender].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 8);
   }, [region, gender]);
 
   const handleViewDetails = (profile: Profile) => {
@@ -40,22 +45,22 @@ const ProfilesPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-20">
         <div className="text-center mb-12">
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             onClick={handleBack}
             className="mb-8 text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Gender Selection
           </Button>
-          
+
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             {gender} Profiles in {region}
           </h1>
-          
+
           <div className="flex items-center justify-center gap-4 mb-6">
             <Badge variant="secondary" className="text-base px-4 py-2">
               <MapPin className="w-4 h-4 mr-2" />
@@ -66,9 +71,10 @@ const ProfilesPage = () => {
               {gender}
             </Badge>
           </div>
-          
+
           <p className="text-xl text-muted-foreground">
-            {filteredProfiles.length} profile{filteredProfiles.length !== 1 ? 's' : ''} found
+            {filteredProfiles.length} profile
+            {filteredProfiles.length !== 1 ? "s" : ""} found
           </p>
         </div>
 
@@ -90,9 +96,9 @@ const ProfilesPage = () => {
             <p className="text-sm text-muted-foreground mt-2">
               Try selecting a different region or gender.
             </p>
-            <Button 
-              variant="outline" 
-              onClick={() => navigate('/regions')}
+            <Button
+              variant="outline"
+              onClick={() => navigate("/regions")}
               className="mt-6"
             >
               Browse Other Regions

@@ -1,5 +1,10 @@
 import { useState, useMemo } from "react";
-import { ALL_PROFILES, getRegions, Profile } from "@/data/profiles";
+import {
+  ALL_PROFILES,
+  getRegions,
+  getSelectedRegion,
+  Profile,
+} from "@/data/profiles";
 import ProfileCard from "./ProfileCard";
 import ProfileModal from "./ProfileModal";
 import {
@@ -13,19 +18,25 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, Filter } from "lucide-react";
 
 const ProfilesSection = () => {
-  const [selectedRegion, setSelectedRegion] = useState<string>("all");
+  const [selectedRegion, setSelectedRegion] = useState<string>(
+    getSelectedRegion() || "all"
+  );
   const [selectedGender, setSelectedGender] = useState<string>("all");
   const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredProfiles = useMemo(() => {
-    return ALL_PROFILES.filter((profile) => {
+    const list = ALL_PROFILES.filter((profile) => {
       const regionMatch =
         selectedRegion === "all" || profile.region === selectedRegion;
       const genderMatch =
         selectedGender === "all" || profile.gender === selectedGender;
       return regionMatch && genderMatch;
     });
+    if (list.length > 0) return list;
+    // Fallback: return a random small subset to avoid empty results
+    const shuffled = [...ALL_PROFILES].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 8);
   }, [selectedRegion, selectedGender]);
 
   const handleViewDetails = (profile: Profile) => {

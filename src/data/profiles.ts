@@ -33,6 +33,7 @@ export const REGIONS = [
 ];
 
 export const REGIONS_STORAGE_KEY = 'app.regions';
+export const SELECTED_REGION_KEY = 'app.selectedRegion';
 
 export function getRegions(): string[] {
   try {
@@ -54,6 +55,25 @@ export function setRegions(regions: string[]): void {
     if (typeof window === 'undefined') return;
     const cleaned = Array.from(new Set(regions.map((r) => r.trim()).filter(Boolean)));
     window.localStorage.setItem(REGIONS_STORAGE_KEY, JSON.stringify(cleaned));
+  } catch {
+    // no-op
+  }
+}
+
+export function getSelectedRegion(): string | null {
+  try {
+    if (typeof window === 'undefined') return null;
+    const v = window.localStorage.getItem(SELECTED_REGION_KEY);
+    return v || null;
+  } catch {
+    return null;
+  }
+}
+
+export function setSelectedRegion(region: string): void {
+  try {
+    if (typeof window === 'undefined') return;
+    window.localStorage.setItem(SELECTED_REGION_KEY, region);
   } catch {
     // no-op
   }

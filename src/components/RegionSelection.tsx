@@ -1,4 +1,8 @@
-import { getRegions } from "@/data/profiles";
+import {
+  getRegions,
+  getSelectedRegion,
+  setSelectedRegion as setSelectedRegionLS,
+} from "@/data/profiles";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -13,14 +17,18 @@ import { useState } from "react";
 
 const RegionSelection = () => {
   const navigate = useNavigate();
-  const [selectedRegion, setSelectedRegion] = useState<string>("");
+  const [selectedRegion, setSelectedRegion] = useState<string>(
+    getSelectedRegion() || ""
+  );
 
   const handleRegionSelect = (region: string) => {
     setSelectedRegion(region);
+    setSelectedRegionLS(region);
   };
 
   const handleContinue = () => {
     if (selectedRegion) {
+      setSelectedRegionLS(selectedRegion);
       navigate(`/gender/${selectedRegion}`);
     }
   };
