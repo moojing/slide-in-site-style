@@ -21,16 +21,49 @@ export interface Profile {
 }
 
 // Default regions used on first load. Can be overridden via localStorage.
-export const REGIONS = [
-  'Bangkok',
-  'Chiang Mai',
-  'Phuket',
-  'Pattaya',
-  'Hua Hin',
-  'Koh Samui',
-  'Krabi',
-  'Rayong'
+export interface RegionGroup {
+  country: string;
+  cities: string[];
+}
+
+export const REGION_GROUPS: RegionGroup[] = [
+  {
+    country: 'Thailand',
+    cities: [
+      'Bangkok',
+      'Chiang Mai',
+      'Phuket',
+      'Pattaya',
+      'Hua Hin',
+      'Koh Samui',
+      'Krabi',
+      'Rayong',
+      'Sriracha'
+    ]
+  },
+  {
+    country: 'Cambodia',
+    cities: ['Siem Reap', 'Phnom Penh']
+  },
+  {
+    country: 'Vietnam',
+    cities: ['Ho Chih Min']
+  },
+  {
+    country: 'Laos',
+    cities: ['Vientiane']
+  },
+  {
+    country: 'Malaysia',
+    cities: ['Kuala Lumpur']
+  },
+  {
+    country: 'Myanmar',
+    cities: ['Yagon']
+  }
 ];
+
+export const REGIONS = REGION_GROUPS.flatMap((group) => group.cities);
 
 export const REGIONS_STORAGE_KEY = 'app.regions';
 export const SELECTED_REGION_KEY = 'app.selectedRegion';

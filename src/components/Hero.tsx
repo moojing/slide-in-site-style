@@ -39,11 +39,11 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Premium Dating Experience
+          Make a friend, makes your day
         </h1>
-        
+
         <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Connect with verified companions across Thailand
+          Connect with verified companions across Asia
         </p>
         
         <div className="flex justify-center">
